@@ -1,0 +1,2 @@
+sub_projects:
+    resource: "../../src/SubProjects/routing.yaml"

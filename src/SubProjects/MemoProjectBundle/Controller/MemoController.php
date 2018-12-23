@@ -16,8 +16,11 @@ class MemoController extends SubProjectDescriber
      */
     public function index()
     {
-        return $this->render('base/index.html.twig', [
-            'controller_name' => 'BaseController',
-        ]);
+        return $this->subRender('list.html.twig', []);
+    }
+
+    protected function getProjectName() : string
+    {
+        return 'Memo';
     }
 }

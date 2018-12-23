@@ -12,10 +12,17 @@ use Symfony\Component\Routing\Annotation\Route;
 abstract class SubProjectDescriber extends Controller
 {
     /**
-     * Get template context
+     * render in good template context
      */
-    public function getSubTemplate(string $templateName)
+    public function subRender(string $templateName, $params)
     {
+        $projectName = $this->getProjectName();
+        $path = 'SubProjects/' . $projectName . '/' . $templateName;
+        return $this->render($path, $params);
+    }
 
+    protected function getProjectName() : string
+    {
+        return "Override me !";
     }
 }
