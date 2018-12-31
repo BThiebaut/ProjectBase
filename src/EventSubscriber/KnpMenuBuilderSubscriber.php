@@ -26,7 +26,7 @@ class KnpMenuBuilderSubscriber implements EventSubscriberInterface
         ])->setAttribute('class', 'header');
         
         $menu->addChild('Memo', [
-            //'route' => 'project_memo_home',
+            'route' => 'project_memo_home',
             'label' => 'Memo',
             'childOptions' => $event->getChildOptions()
         ])->setLabelAttribute('icon', 'fas fa-tachometer-alt');

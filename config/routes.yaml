@@ -9,3 +9,7 @@ fos_user:
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+project_memo:
+    resource: '../src/SubProjects/MemoProjectBundle/Controller/'
+    type:     annotation
